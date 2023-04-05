@@ -1,6 +1,6 @@
 package Model;
 
-import Questions.Question;
+import Model.Questions.Question;
 
 import java.util.List;
 

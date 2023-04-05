@@ -1,4 +1,4 @@
-package Questions;
+package Model.Questions;
 
 import Enums.EQuestionType;
 import Model.Audio;
@@ -9,8 +9,8 @@ public class SpeakingQuestion extends Question{
 
     private Audio audio_2;
 
-    public SpeakingQuestion(EQuestionType type, Audio audio_1, Audio audio_2) {
-        super(type);
+    public SpeakingQuestion(EQuestionType type, Integer questionPoint, Audio audio_1, Audio audio_2) {
+        super(type, questionPoint);
         this.audio_1 = audio_1;
         this.audio_2 = audio_2;
     }

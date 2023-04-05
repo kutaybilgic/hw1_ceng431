@@ -21,14 +21,14 @@ public class UserFactory {
                 String password = fields[1];
 
                 LanguageFactory languageFactory = new LanguageFactory();
-                var selectedLanguage = languageFactory.createLanguage();
+                //var selectedLanguage = languageFactory.createLanguage();
 
-                Random random = new Random();
-                var streakNumber = random.nextInt(0, 365);
-
-                User user = new User(username, password, selectedLanguage, selectedLanguage.getUnitList().size(),
-                        streakNumber);
-                userList.add(user);
+//                Random random = new Random();
+//                var streakNumber = random.nextInt(0, 365);
+//
+//                User user = new User(username, password, selectedLanguage, selectedLanguage.getUnitList().size(),
+//                        streakNumber);
+//                userList.add(user);
                 line = reader.readLine();
             }
         } catch (IOException e) {

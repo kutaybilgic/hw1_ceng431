@@ -1,4 +1,4 @@
-package Questions;
+package Model.Questions;
 
 import Enums.EQuestionType;
 
@@ -8,8 +8,8 @@ public class ReadingQuestion extends Question {
 
     private String translatedText;
 
-    public ReadingQuestion(EQuestionType type, String englishText, String translatedText) {
-        super(type);
+    public ReadingQuestion(EQuestionType type, Integer questionPoint,String englishText, String translatedText) {
+        super(type, questionPoint);
         this.englishText = englishText;
         this.translatedText = translatedText;
     }

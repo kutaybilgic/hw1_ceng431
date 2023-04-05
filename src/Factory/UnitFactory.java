@@ -2,7 +2,6 @@ package Factory;
 
 import Model.Quiz;
 import Model.Unit;
-import Questions.Question;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +9,7 @@ import java.util.Random;
 
 public class UnitFactory {
 
-    public Unit createUnit() {
+    public Unit createUnit(Integer unitNumber) {
         Random random = new Random();
         var quizNumber = random.nextInt(1, 10);
         QuizFactory quizFactory = new QuizFactory();
@@ -21,6 +20,7 @@ public class UnitFactory {
             quizList.add(quiz);
         }
 
-        return new Unit(random.nextInt(1,100), quizList);
+
+        return new Unit(unitNumber, quizList);
     }
 }

@@ -1,4 +1,4 @@
-package Questions;
+package Model.Questions;
 
 import Enums.EQuestionType;
 import Interfaces.IQuestions;
@@ -11,9 +11,9 @@ public abstract class Question implements IQuestions {
 
     private Integer questionPoint;
 
-    public Question(EQuestionType type) {
+    public Question(EQuestionType type, Integer questionPoint) {
         this.type = type;
-        this.questionPoint = 0;
+        this.questionPoint = questionPoint;
     }
 
     @Override

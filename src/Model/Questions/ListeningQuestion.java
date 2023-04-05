@@ -1,4 +1,4 @@
-package Questions;
+package Model.Questions;
 
 import Enums.EQuestionType;
 import Interfaces.IQuestions;
@@ -10,8 +10,8 @@ public class ListeningQuestion extends Question implements IQuestions {
 
     private Audio listeningAudio;
 
-    public ListeningQuestion(EQuestionType type, String listeningWord, Audio listeningAudio) {
-        super(type);
+    public ListeningQuestion(EQuestionType type, Integer questionPoint, String listeningWord, Audio listeningAudio) {
+        super(type, questionPoint);
         this.listeningWord = listeningWord;
         this.listeningAudio = listeningAudio;
     }

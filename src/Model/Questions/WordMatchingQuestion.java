@@ -1,4 +1,4 @@
-package Questions;
+package Model.Questions;
 
 import Enums.EQuestionType;
 
@@ -8,8 +8,8 @@ public class WordMatchingQuestion extends Question{
 
     private Map<String, String> matching;
 
-    public WordMatchingQuestion(EQuestionType type, Map<String, String> matching) {
-        super(type);
+    public WordMatchingQuestion(EQuestionType type, Integer questionPoint ,Map<String, String> matching) {
+        super(type, questionPoint);
         this.matching = matching;
     }
 

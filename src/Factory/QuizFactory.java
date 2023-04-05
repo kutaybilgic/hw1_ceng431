@@ -1,7 +1,7 @@
 package Factory;
 
 import Model.Quiz;
-import Questions.Question;
+import Model.Questions.Question;
 
 import java.util.ArrayList;
 import java.util.List;
