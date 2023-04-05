@@ -25,7 +25,7 @@ public class LanguageFactory {
         int L = 0;
         int S = 0;
         int W = 0;
-
+//
         List<String> writerCsv = new ArrayList<>();
 
         for (int i = 0 ; i < 4 ; i++) {
