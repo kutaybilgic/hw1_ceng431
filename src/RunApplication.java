@@ -1,5 +1,7 @@
+import Enums.ELanguage;
 import Factory.LanguageFactory;
 import Factory.UserFactory;
+import Model.Language;
 import Model.User;
 
 import java.io.IOException;
@@ -18,6 +20,11 @@ public class RunApplication {
         List<User> userList = userFactory.createUsers("./users.csv");
 
         System.out.println(userList.size());
+
+
+
+
+
 
     }
 

@@ -1,5 +1,6 @@
 package Factory;
 
+import Enums.ELanguage;
 import Model.User;
 
 import java.io.BufferedReader;
@@ -16,19 +17,22 @@ public class UserFactory {
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line = reader.readLine();
             while (line != null) {
+                Random random = new Random();
                 String[] fields = line.split(";");
                 String username = fields[0];
                 String password = fields[1];
+                ELanguage[] languages = ELanguage.values();
+                ELanguage randomLanguage = languages[random.nextInt(languages.length)];
 
                 LanguageFactory languageFactory = new LanguageFactory();
-                //var selectedLanguage = languageFactory.createLanguage();
+                var selectedLanguage = languageFactory.getCreatedLanguages("./languages.csv", randomLanguage);
 
-//                Random random = new Random();
-//                var streakNumber = random.nextInt(0, 365);
-//
-//                User user = new User(username, password, selectedLanguage, selectedLanguage.getUnitList().size(),
-//                        streakNumber);
-//                userList.add(user);
+                var streakNumber = random.nextInt(0, 365);
+
+                User user = new User(username, password, selectedLanguage, selectedLanguage.getCurrentUnit(),
+                        streakNumber);
+                user.setTotalPoints(selectedLanguage.getTotalPoint());
+                userList.add(user);
                 line = reader.readLine();
             }
         } catch (IOException e) {
