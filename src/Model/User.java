@@ -17,6 +17,8 @@ public class User {
 
     private ELeagueType currentLeague;
 
+    private Integer solvedQuizzes;
+
     public User(String username, String password, Language selectedLanguage, Integer unitCount, Integer streak) {
         this.username = username;
         this.password = password;
@@ -25,6 +27,23 @@ public class User {
         this.streak = streak;
         this.totalPoints = 0;
         this.currentLeague = ELeagueType.BRONZE;
+        this.solvedQuizzes = 0;
+    }
+
+    public Integer getUnitCount() {
+        return unitCount;
+    }
+
+    public void setUnitCount(Integer unitCount) {
+        this.unitCount = unitCount;
+    }
+
+    public Integer getSolvedQuizzes() {
+        return solvedQuizzes;
+    }
+
+    public void setSolvedQuizzes(Integer solvedQuizzes) {
+        this.solvedQuizzes = solvedQuizzes;
     }
 
     public String getUsername() {

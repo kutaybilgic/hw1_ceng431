@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ILeagues {
 
-    List<User> getRankings();
+    void getRankings();
 
-    void upgradeRank();
+    List<User> upgradeRank();
 }

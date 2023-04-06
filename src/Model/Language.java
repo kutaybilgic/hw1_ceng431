@@ -15,11 +15,33 @@ public class Language {
 
     private Integer totalPoint;
 
+    private Integer totalQuizNumber;
+
+    private Integer solvedQuizzes;
+
     public Language(ELanguage languageName, List<Unit> unitList) {
         this.languageName = languageName;
         this.unitList = unitList;
         this.currentUnit = 0;
         this.totalPoint = 0;
+        this.totalQuizNumber = 0;
+        this.solvedQuizzes = 0;
+    }
+
+    public Integer getSolvedQuizzes() {
+        return solvedQuizzes;
+    }
+
+    public void setSolvedQuizzes(Integer solvedQuizzes) {
+        this.solvedQuizzes = solvedQuizzes;
+    }
+
+    public Integer getTotalQuizNumber() {
+        return totalQuizNumber;
+    }
+
+    public void setTotalQuizNumber(Integer totalQuizNumber) {
+        this.totalQuizNumber = totalQuizNumber;
     }
 
     public Integer getTotalPoint() {

@@ -14,7 +14,13 @@ import java.util.*;
 
 public class LanguageFactory {
 
-    public void createAllLanguage() {
+    public void createAllLanguage(String fileName) {
+
+        File file = new File(fileName);
+
+        if (file.exists()) {
+            return;
+        }
 
         Random random = new Random();
         ELanguage[] languagesType = ELanguage.values();
@@ -68,12 +74,7 @@ public class LanguageFactory {
             unitList.clear();
 
         }
-        String fileName = "languages.csv";
-        File file = new File(fileName);
 
-        if (file.exists()) {
-            return;
-        }
 
         try {
             FileWriter fileWriter = new FileWriter(file);
@@ -163,12 +164,20 @@ public class LanguageFactory {
 
             for (String unit : data.get(language).keySet()) {
                 //System.out.println(" - " + unit);
-                List<Quiz> quizList = new ArrayList<>();
                 countQuizzes += data.get(language).get(unit).size();
 
+            }
+            int mustSolvedQuiz = random.nextInt(6, countQuizzes);
 
+            for (String unit: data.get(language).keySet()) {
+                List<Quiz> quizList = new ArrayList<>();
 
                 for (String quiz : data.get(language).get(unit).keySet()) {
+
+                    if ((solvedQuizzes == mustSolvedQuiz) && isSolved) {
+                        isSolved = false;
+                        userCurrentUnit = unitNumber;
+                    }
 
                     List<Question> questionList = new ArrayList<>();
                     Map<String, int[]> quizData = data.get(language).get(unit).get(quiz);
@@ -198,20 +207,17 @@ public class LanguageFactory {
                     }
 
                     Quiz createdQuiz = new Quiz(questionList);
-                    //System.out.println(isSolved);
                     if (isSolved) {
                         for (Question question:createdQuiz.getQuestionList()) {
                             if (question.isCorrect()) {
                                 createdQuiz.setQuizTotalPoint(createdQuiz.getQuizTotalPoint() + question.getQuestionPoint());
                             }
                         }
+                        solvedQuizzes++;
                     }
 
 
                     totalPoint += createdQuiz.getQuizTotalPoint();
-
-                    solvedQuizzes++;
-
                     quizList.add(createdQuiz);
 
                     //System.out.println("   - " + quiz + ":");
@@ -221,27 +227,24 @@ public class LanguageFactory {
                     //System.out.println("        - Word Matching: " + wordMatchingQuestions[0]);
 
                 }
+
+
                 Unit createdUnit = new Unit(unitNumber, quizList);
                 unitList.add(createdUnit);
                 unitNumber ++;
+
             }
-
-                int mustSolvedQuiz = random.nextInt(6, countQuizzes);
-                System.out.println(countQuizzes);
-                if (solvedQuizzes > mustSolvedQuiz) {
-                    isSolved = false;
-                    userCurrentUnit = unitNumber;
-                }
-
-
             createdLanguage = new Language(languageType, unitList);
+            createdLanguage.setTotalQuizNumber(countQuizzes);
             createdLanguage.setCurrentUnit(userCurrentUnit);
             createdLanguage.setTotalPoint(totalPoint);
+            createdLanguage.setSolvedQuizzes(solvedQuizzes);
 
 
 
+        };
         }
-        }
+
         return createdLanguage;
     }
 }
