@@ -5,7 +5,6 @@ import Enums.ELeagueType;
 import Interfaces.ILeagues;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -45,23 +44,27 @@ public class League implements ILeagues {
     public List<User> upgradeRank() {
         List<User> upgradesUserList = new ArrayList<>();
         if (this.getLeagueName().equals(ELeagueType.BRONZE)) {
-            for (int i = 0 ; i < 15 ; i++) {
+            int countNumber = Math.min(userList.size(), 15);
+            for (int i = 0 ; i < countNumber ; i++) {
                 upgradesUserList.add(userList.get(i));
             }
         }
 
         else if (this.getLeagueName().equals(ELeagueType.SILVER)) {
-            for (int i = 0 ; i < 10 ; i++) {
+            int countNumber = Math.min(userList.size(), 10);
+            for (int i = 0 ; i < countNumber ; i++) {
                 upgradesUserList.add(userList.get(i));
             }
         }
         else if (this.getLeagueName().equals(ELeagueType.GOLD)) {
-            for (int i = 0 ; i < 5 ; i++) {
+            int countNumber = Math.min(userList.size(), 5);
+            for (int i = 0 ; i < countNumber ; i++) {
                 if (userList.get(i).getStreak() > 6) {
                     upgradesUserList.add(userList.get(i));
                 }
             }
         }
+
         else if (this.getLeagueName().equals(ELeagueType.SAPPHIRE)) {
             for (User user : userList) {
                 if ((user.getStreak() > 29) && ((user.getTotalPoints() > 5000) || (user.getCurrentUnit() > 9))) {

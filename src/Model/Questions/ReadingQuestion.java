@@ -1,6 +1,7 @@
 package Model.Questions;
 
 import Enums.EQuestionType;
+import Util.RandomGenerator;
 
 public class ReadingQuestion extends Question {
 
@@ -8,10 +9,10 @@ public class ReadingQuestion extends Question {
 
     private String translatedText;
 
-    public ReadingQuestion(EQuestionType type, Integer questionPoint,String englishText, String translatedText) {
+    public ReadingQuestion(EQuestionType type, Integer questionPoint) {
         super(type, questionPoint);
-        this.englishText = englishText;
-        this.translatedText = translatedText;
+        this.englishText = RandomGenerator.randomStringGenerator();
+        this.translatedText = RandomGenerator.randomStringGenerator();
     }
 
     @Override

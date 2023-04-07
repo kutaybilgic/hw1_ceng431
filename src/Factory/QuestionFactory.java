@@ -2,6 +2,7 @@ package Factory;
 
 import Enums.EQuestionType;
 import Model.Questions.*;
+import Util.RandomGenerator;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,7 +18,7 @@ public class QuestionFactory {
         AudioFactory audioFactory = new AudioFactory();
 
         switch (randomType) {
-            case READING -> question = new ReadingQuestion(randomType, 10, "text", "translatedText");
+            case READING -> question = new ReadingQuestion(randomType, 10);
             case LISTENING -> question = new ListeningQuestion(randomType, 7,"listeningWord", audioFactory.createAudio());
             case SPEAKING ->
                     question = new SpeakingQuestion(randomType, 8, audioFactory.createAudio(), audioFactory.createAudio());
@@ -25,7 +26,7 @@ public class QuestionFactory {
                 var mapNumber = random.nextInt(4, 8);
                 Map<String, String> mapMatching = new HashMap<>();
                 for (int i = 0; i < mapNumber; i++) {
-                    mapMatching.put("key", "value");
+                    mapMatching.put(RandomGenerator.randomStringGenerator(), RandomGenerator.randomStringGenerator());
                 }
                 question = new WordMatchingQuestion(randomType, 5, mapMatching);
             }
@@ -40,7 +41,7 @@ public class QuestionFactory {
         AudioFactory audioFactory = new AudioFactory();
 
         switch (type) {
-            case READING -> question = new ReadingQuestion(type, 10, "text", "translatedText");
+            case READING -> question = new ReadingQuestion(type, 10);
             case LISTENING -> question = new ListeningQuestion(type, 7,"listeningWord", audioFactory.createAudio());
             case SPEAKING ->
                     question = new SpeakingQuestion(type, 8, audioFactory.createAudio(), audioFactory.createAudio());

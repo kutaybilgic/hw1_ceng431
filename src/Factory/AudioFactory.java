@@ -1,6 +1,7 @@
 package Factory;
 
 import Model.Audio;
+import Util.RandomGenerator;
 
 import java.util.Random;
 
@@ -11,6 +12,6 @@ public class AudioFactory {
 
         var length = random.nextInt(1,300);
 
-        return new Audio("name", length);
+        return new Audio(RandomGenerator.randomStringGenerator(), length);
     }
 }
