@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a385947-5c3d-4dd0-8a63-2f60f6b6b9f9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hw1_ceng431/Factory/AudioFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw1_ceng431/Factory/AudioFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hw1_ceng431/Factory/LeagueFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw1_ceng431/Factory/LeagueFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hw1_ceng431/Factory/QuestionFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw1_ceng431/Factory/QuestionFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hw1_ceng431/Factory/QuestionFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw1_ceng431/Factory/QuestionFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hw1_ceng431/Model/League$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw1_ceng431/Model/League$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hw1_ceng431/Model/League.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw1_ceng431/Model/League.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hw1_ceng431/Model/Questions/ReadingQuestion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw1_ceng431/Model/Questions/ReadingQuestion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hw1_ceng431/RunApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw1_ceng431/RunApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Factory/AudioFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Factory/AudioFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Factory/LanguageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Factory/LanguageFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Factory/LeagueFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Factory/LeagueFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Factory/QuestionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Factory/QuestionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/League.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/League.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Questions/ReadingQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Questions/ReadingQuestion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RunApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/RunApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users.csv" beforeDir="false" />
-    </list>
+    <list default="true" id="8a385947-5c3d-4dd0-8a63-2f60f6b6b9f9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,7 +70,7 @@
       <workItem from="1680691265771" duration="385000" />
       <workItem from="1680783825460" duration="4906000" />
       <workItem from="1680805259481" duration="13728000" />
-      <workItem from="1680866406534" duration="4157000" />
+      <workItem from="1680866406534" duration="4464000" />
     </task>
     <servers />
   </component>
