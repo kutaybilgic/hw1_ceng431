@@ -15,6 +15,8 @@ public class RunApplication {
 
     public void runApplication(){
 
+        QueryGenerator queryGenerator = new QueryGenerator();
+
         //If language.csv does not exist, it creates all Languages and determines the number of Unit, Quiz and question in it and writes it to csv.
         LanguageFactory languageFactory = new LanguageFactory();
         languageFactory.createAllLanguage("./languages.csv");
@@ -30,15 +32,12 @@ public class RunApplication {
         //It deletes old csv file and creates new csv file.
         deleteFile("./users.csv", "users2.csv", "./users2.csv");
 
-        // ELanguage enum'unuzdaki dillerin listesi
-        List<ELanguage> languages = Arrays.asList(ELanguage.values());
-
-
-        for (List<League> leagues : leagueMap.values()) {
-            for (League league : leagues) {
-                System.out.println(league.getLeagueName() + ": " + league.getUserList().size());
-            }
-        }
+        //Run queries
+        queryGenerator.findMaxPointForUsers(userList);
+        queryGenerator.findMostAdvancedUserInGerman(userList);
+        queryGenerator.findMaxUnitNumberForLanguage(userList);
+        queryGenerator.findMaxNumberOfQuizzesForLanguage(userList);
+        queryGenerator.findTopThreeSilverUsersInItalianLeague(leagueMap);
 
 
     }

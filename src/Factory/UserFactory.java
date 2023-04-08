@@ -41,7 +41,6 @@ public class UserFactory {
                         user.getSolvedQuizzes() + ";" + user.getTotalPoints();
 
                 writer.println(userInfo);
-
                 line = reader.readLine();
             }
         } catch (IOException e) {

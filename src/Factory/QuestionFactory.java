@@ -19,7 +19,7 @@ public class QuestionFactory {
 
         switch (randomType) {
             case READING -> question = new ReadingQuestion(randomType, 10);
-            case LISTENING -> question = new ListeningQuestion(randomType, 7,"listeningWord", audioFactory.createAudio());
+            case LISTENING -> question = new ListeningQuestion(randomType, 7,RandomGenerator.randomStringGenerator(), audioFactory.createAudio());
             case SPEAKING ->
                     question = new SpeakingQuestion(randomType, 8, audioFactory.createAudio(), audioFactory.createAudio());
             case WORD_MATCHING -> {

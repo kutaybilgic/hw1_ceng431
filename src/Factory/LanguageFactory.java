@@ -1,11 +1,9 @@
 package Factory;
 
 import Enums.ELanguage;
-import Enums.ELeagueType;
 import Enums.EQuestionType;
 import Model.Language;
 import Model.Questions.Question;
-import Model.Questions.ReadingQuestion;
 import Model.Quiz;
 import Model.Unit;
 
@@ -139,10 +137,6 @@ public class LanguageFactory {
                 int userCurrentUnit = 0;
                 int totalPoint = 0;
                 List<Unit> unitList = new ArrayList<>();
-
-
-
-
                 for (String unit : data.get(language).keySet()) {
                     countQuizzes += data.get(language).get(unit).size();
 
